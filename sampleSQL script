@@ -1,0 +1,13 @@
+CREATE DATABASE Employees;
+USE Employees;
+CREATE TABLE EMPDetails ( id smallint unsigned not null auto_increment, name varchar(20) not null, constraint pk_EMPDetails primary key (id) );
+INSERT INTO EMPDetails ( id, name ) VALUES ( null, 'Adrian');
+INSERT INTO EMPDetails ( id, name ) VALUES ( null, 'Jeremy' );
+INSERT INTO EMPDetails ( id, name ) VALUES ( null, 'Jane' );
+INSERT INTO EMPDetails ( id, name ) VALUES ( null, 'Jamerson' );
+INSERT INTO EMPDetails ( id, name ) VALUES ( null, 'Andy' );
+INSERT INTO EMPDetails ( id, name ) VALUES ( null, 'Derrick' );
+INSERT INTO EMPDetails ( id, name ) VALUES ( null, 'Danny' );
+INSERT INTO EMPDetails ( id, name ) VALUES ( null, 'Lim' );
+INSERT INTO EMPDetails ( id, name ) VALUES ( null, 'Tony' );
+INSERT INTO EMPDetails ( id, name ) VALUES ( null, 'Chris' );
