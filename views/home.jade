@@ -1,0 +1,39 @@
+extends layout
+
+block content
+	div(class="container", id="body")
+		table(class="table table-bordered")
+			thread
+				tr
+					th Action
+					th ID
+					th Name
+					th Company
+					
+			tbody
+				each item in employeeList
+					tr
+						td 
+							button(class="btn btn-info btn-sm",data-toggle="modal",data-target='#myModal',id=item.id)
+								span(class="glyphicon glyphicon-pencil")
+																					
+						td=item.id
+						td=item.name
+						td=item.empdetails
+
+	div(id="myModal" class="modal fade" role="dialog" )
+		.modal-dialog
+			.modal-content
+				.modal-header
+					button.close(type="button", data-dismiss="modal", aria-hidden="true") &times;
+					h4.modal-title Modal Title
+				.modal-body
+					p Body Content
+				.modal-footer
+					button.btn.btn-default(type="button", data-dismiss="modal") Close
+					button.btn.btn-primary(type="button", data-dismiss="modal") Save Changes
+
+	script.
+		$('#myModal').on('show.bs.modal', function(e){
+			console.log(e.relatedTarget.id);
+		});
